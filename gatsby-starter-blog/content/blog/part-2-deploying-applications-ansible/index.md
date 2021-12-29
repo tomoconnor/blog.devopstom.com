@@ -151,7 +151,8 @@ You can get more information about stuff that supervisord is controlling by runn
 `sudo supervisorctl status`
 on the target host.
 
-```$ sudo supervisorctl status
+```
+$ sudo supervisorctl status
 thingy                           RUNNING    pid 19756, uptime 0:00:06
 ```
 
