@@ -1,6 +1,6 @@
 ---
 title: The Name Game
-date: "2011-04-23T23:46:37.121Z"
+date: "2011-04-23T00:00:37.121Z"
 description: This is real life social engineering.
 warning: ancient
 ---
@@ -41,15 +41,13 @@ The "Elf Name" meme.
 
 First spotted on Facebook, seems to be spreading both on Facebook and Twitter as #myELFname. 
 
-This one asks for the first letter of your first name (nothing too telling here), and the month you were born in (slightly more PII [Personally Identifiable Information ).  
+This one asks for the first letter of your first name (nothing too telling here), and the month you were born in (slightly more PII [Personally Identifiable Information](https://en.wikipedia.org/wiki/Personally_identifiable_information) ).  
 
-Android screenshot 
-
- 
+![Android screenshot](./Screenshot_2013-11-14-06-31-47.png)
 
 There's nothing special about this one, it's only asking for minimal PII, but still.  It's a slippery slope, and these memes are *still* occurring.
 
-October 23rd 2013
+### October 23rd 2013
 
 "Your Downton Name"
 
@@ -57,49 +55,47 @@ Comprised of your Grandparent's First Name, and your First School.
 
 Both of these are known questions for a number of secret answer challenges. 
 
-February 7th 2013
+### February 7th 2013
 
 "The Corgi Name"
 
 Comprised of your Zodiac sign, Favourite colour, and last digit of your telephone number.  Apparently this is what passes for amusement these days.  
 
-This one was heavily promoted by @BuzzFeed and gained 100+ retweets.  They really should know better.
+This one was heavily promoted by [@BuzzFeed](https://twitter.com/BuzzFeed/status/299268199000723456) and gained 100+ retweets.  They really should know better.
 
-March 4th 2011
+### March 4th 2011
 The current meme is the "Pornstar Name"
 
 This meme is asking for your First Pet, and your Mother's Maiden Name. 
 
  
 
-Earlier Occurances
+## Earlier Occurances
 
-The NPR Name Game:
+### The NPR Name Game:
 
 Comprised of your Grandparent's Middle Name, and your first Foreign Penpal's Last Name.
 
 Seriously, These are some of the most common security questions used on a very large number of websites.  By publicly tweeting the answer, you are handing over all the details a nefarious hacker needs to compromise your account, and steal your identity.
 
-I cannot stress this highly enough.  Do NOT tweet your Porn Name / Pornstar Name, or any other of these Name Game memes.
+I cannot stress this highly enough.  Do **NOT** tweet your Porn Name / Pornstar Name, or any other of these Name Game memes.
 
 There’s  often a meme going around on facebook/twitter/etc.. One of these note things, you do it, you tag your friends, they do it, and so on, or it proliferates on twitter.
 
 These bug me enormously, because they ask for a fair bit of information.  Here’s a brief summary of the answers you give.
 
+* Your Full Name
+* Your Mother’s Middle Name.
+* Your Grandfather’s Name.
+* Your favourite: Colour, Animal, Drink, Ice cream flavour, Cookie
+* Place of Birth
+* Street where you live
+* Street you grew up on
+* Name of your Pet
  
-
-Your Full Name
-Your Mother’s Middle Name.
-Your Grandfather’s Name.
-Your favourite: Colour, Animal, Drink, Ice cream flavour, Cookie
-Place of Birth
-Street where you live
-Street you grew up on
-Name of your Pet
- 
-
 I recognise some of those as secret question/answer pairs from a number of websites.  
 
 I’m really only kicking the tyres on this one, but what if someone designed these memes to gather data about people, including data about their past, place of birth, residential address, pet names, other stuff that’s commonly asked for sample questions on “Secret Question/Answer” credentials online.
 
-I decided not to participate in this one unsurprisingly.  In fact, I recommend that everyone who has done the “Name Game” note looks closely at their note privacy settings, just to make sure they don’t mind everyone knowing this information about them.
+I decided not to participate in this one unsurprisingly.  
+In fact, I recommend that everyone who has done the “Name Game” note looks closely at their note privacy settings, just to make sure they don’t mind everyone knowing this information about them.

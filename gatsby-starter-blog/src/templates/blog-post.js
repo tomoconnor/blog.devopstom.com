@@ -32,7 +32,10 @@ const BlogPostTemplate = ({ data, location }) => {
           <h2> This blog post is *personal* in nature. </h2>
           )
           }
-
+          {post.frontmatter.warning === "nontechnical" && (
+          <h3> This blog post is nontechnical in nature, and doesn't really fit anywhere else. </h3>
+          )
+          }
 
         </header>
         <section
