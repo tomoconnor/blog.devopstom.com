@@ -49,7 +49,8 @@ and smokeping itself in
 `/opt/smokeping-2.6.8`
 Things I had to do by hand:
 
-```mkdir /opt/smokeping-2.6.8/cache
+```
+mkdir /opt/smokeping-2.6.8/cache
 chmod a+w /opt/smokeping-2.6.8/cache
 ```
 and of course, the Nginx config.

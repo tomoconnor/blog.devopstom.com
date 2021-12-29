@@ -54,7 +54,8 @@ Download and open http://releases.ansible.com/ansible-tower/docs/tower_user_guid
 
 Install dependencies:
 
-```sudo apt-get install python-dev python-yaml python-paramiko python-jinja2 python-pip sshpass
+```
+sudo apt-get install python-dev python-yaml python-paramiko python-jinja2 python-pip sshpass
 sudo pip install ansible
 cd ansible-tower-setup-$VERSION
 ```
@@ -64,7 +65,8 @@ It should come as no surprise that the Ansible Tower installer is actually an An
 
 Edit group_vars/all to set some sane defaults - basically changing passwords away from what they ship with.
 
-```pg_password: AWsecret
+```
+pg_password: AWsecret
 admin_password: password
 rabbitmq_password: "AWXbunnies"
 ```

@@ -168,7 +168,8 @@ I've gone ahead and predefined a hostgroup in our hosts inventory file called '`
 
 If it works, you should get something like this appearing in the hosts file after it's launched the instance:
 
-```[launched]
+```
+[launched]
 ec2-50-19-163-42.compute-1.amazonaws.com ansible_ssh_private_key_file=ansible_ec2.pem
 ```
 

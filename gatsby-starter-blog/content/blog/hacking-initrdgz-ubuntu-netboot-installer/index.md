@@ -27,7 +27,8 @@ So go ahead and grab those initrd.gz and 'linux' files, then run `file` on 'linu
 
 If you have a look inside the Makefile for the e1000e drivers, there's this block
 
-```ifeq (,$(BUILD_KERNEL))
+```
+ifeq (,$(BUILD_KERNEL))
 BUILD_KERNEL=$(shell uname -r)
 endif
 ```
@@ -148,7 +149,8 @@ That's actually the only bit I had to do, and I only did it for compatibility re
 
 The compress bit was the bit i didn't quite know about.
 
-```cd initrdhacking
+```
+cd initrdhacking
 find . | cpio -H newc -o > ../initrd.cpio
 cd ..
 gzip initrd.cpio
