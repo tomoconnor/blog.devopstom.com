@@ -213,7 +213,7 @@ In general, a role consists of the following subdirectories, "files", "handlers"
 
 files/ contains files that will be copied to the target with the copy: module.
 
-handlers/ contains YAML files which contain 'handlers' little bits of config that can be triggered with the notify: action inside a task. Usually just handlers/main.yml - See http://docs.ansible.com/playbooks_intro.html#handlers-running-operations-on-change for more information on what handlers are for.
+handlers/ contains YAML files which contain 'handlers' little bits of config that can be triggered with the notify: action inside a task. Usually just handlers/main.yml - See https://docs.ansible.com/ansible/latest/user_guide/playbooks_handlers.html for more information on what handlers are for.
 
 meta/ contains YAML files containing role dependencies.  Usually just meta/main.yml
 
