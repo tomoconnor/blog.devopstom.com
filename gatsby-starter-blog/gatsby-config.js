@@ -3,7 +3,7 @@ module.exports = {
     title: `Devopstom's Blog`,
     author: {
       name: `Tom O'Connor`,
-      summary: `an AWS Technical Specialist, with background in DevOps and scalability.`,
+      summary: `an AWS Community Builder and Senior Security Engineer, with background in DevOps and scalability.`,
     },
     description: `The new home of the blog of @devopstom.  A mix of technical and personal posts.`,
     siteUrl: `https://blog.devopstom.com/`,
@@ -128,5 +128,11 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `blog.devopstom.com`,
+      },
+    },
   ],
 }
