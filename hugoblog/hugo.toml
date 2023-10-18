@@ -1,0 +1,4 @@
+baseURL = 'https://blog.devopstom.com/'
+languageCode = 'en-gb'
+title = 'blog.devopstom.com'
+theme = "PaperMod"
