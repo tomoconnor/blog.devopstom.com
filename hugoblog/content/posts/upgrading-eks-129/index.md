@@ -6,9 +6,6 @@ description: "Step by Step upgrading from 1.29 to 1.32."
 
 Did this earlier today for a client.  You can't directly upgrade from 1.29 to 1.32, so instead have to repeat these steps for each version.
 
-
-# Upgrading Amazon EKS from 1.29 to 1.32 in Stages
-
 Upgrading Amazon Elastic Kubernetes Service (EKS) is a crucial maintenance task that ensures security, stability, and access to the latest Kubernetes features. Given AWS’s recommendation to upgrade one minor version at a time, this guide walks through upgrading **EKS from version 1.29 to 1.32 in stages**.
 
 ---
