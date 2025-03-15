@@ -49,9 +49,15 @@ I had a brief try earlier this week to set up a fairly generic MCP server as a p
 ### In Conclusion
 I don't like MCP.   
 
-It feels like we're on the edge of a new format war, like VHS vs Betamax in the 1990s.  OpenAI have a [competing SDK set](https://openai.com/index/new-tools-for-building-agents/), which whilst currently only for OpenAI tools and models.  [Agents.json](https://github.com/wild-card-ai/agents-json) is an OpenAPI thing that I could definitely get behind, but making the python library for it AGPL3 feels like a proper footgun.
+It feels like we're on the edge of a new format war, like VHS vs Betamax in the 1990s.  
+OpenAI have a [competing SDK set](https://openai.com/index/new-tools-for-building-agents/), which whilst currently only for OpenAI tools and models.  
+
+[Agents.json](https://github.com/wild-card-ai/agents-json) is an OpenAPI thing that I could definitely get behind, but making the python library for it AGPL3 feels like a proper footgun.
+
 I also found another tool/library/protocol/thing positioning itself in the same field https://agent-network-protocol.com/ but honestly, I found the documentation to be too difficult to read. 
+
 [SLOP](https://github.com/agnt-gg/slop) too, looks promising
+
 
 Given that pornography may have been one of the deciding factor for the Betamax/VHS format war, perhaps we'll have to wait and see if someone builds a MCP or agent.json for pornhub.
 
