@@ -59,7 +59,7 @@ I also found another tool/library/protocol/thing positioning itself in the same 
 [SLOP](https://github.com/agnt-gg/slop) too, looks promising
 
 
-Given that pornography may have been one of the deciding factor for the Betamax/VHS format war, perhaps we'll have to wait and see if someone builds a MCP or agent.json for pornhub.
+Given that pornography may have been one of the deciding factors for the Betamax/VHS format war, perhaps we'll have to wait and see if someone builds a MCP or agent.json for pornhub.
 
 I don't think I'm alone in my criticism of MCP, there's a [lot of skepticism on hackernews](https://news.ycombinator.com/item?id=43302297) about MCP’s practicality. 
 
