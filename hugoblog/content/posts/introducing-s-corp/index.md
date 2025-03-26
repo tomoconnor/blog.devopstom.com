@@ -59,7 +59,7 @@ I uploaded a .docx template with {{ CompanyName }} and {{ FounderName }} placeho
 1. Accepts a POST payload with those values
 2. Injects them into the DOCX
 3. Converts it to a PDF
-4. Returns it with the correct Content-Disposition header so the browser downloads it
+4. Returns it with the correct `Content-Disposition` header so the browser downloads it
 
 I didn’t need to mess with a single PDF library. The whole thing took less time than fighting with any open-source PDF generator I’ve ever touched.
 
@@ -67,10 +67,10 @@ I didn’t need to mess with a single PDF library. The whole thing took less tim
 Comnoco gave me the ability to:
 
 * Build two fully functional backend endpoints
-* Keep all logic version-controlled, editable, and visual
-* Avoid deploying anything
+* Keep all logic editable and visual
+* Avoid hosting anything
 
-It’s not just for jokes. I could see myself using it for internal tools, prototypes, customer onboarding flows — anywhere I’d normally duct-tape together Lambda functions and Zapier.
+It’s not just for jokes. I find myself using it for internal tools, prototypes, customer onboarding flows — anywhere I’d normally duct-tape together Lambda functions and Zapier.
 
 And if you’re someone like me who builds weird stuff on weekends (or out of spite), Comnoco hits the sweet spot of fast, functional, and actually fun to use.
 
@@ -82,7 +82,7 @@ It has no backend in the traditional sense
 Comnoco handles all dynamic logic:
 * Random testimonials
 * PDF certificate generation
-* The project shipped fast and cost nothing to host
+* The project shipped quickly and easily
 
 You can try it (and download your own fake badge of ethical superiority) here: https://s-corp.lol
 
