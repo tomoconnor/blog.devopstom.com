@@ -1,7 +1,7 @@
 ---
 title: "Introducing: S-Corp™"
 date: "2025-03-26T23:00:01.123Z"
-description: "Using Comnoco to automate startup nonsense at scale."
+description: "Using [Comnoco](https://comnoco.com/) to automate startup nonsense at scale."
 ---
 
 ## 🚀 How I Used a No-Code Backend to Power a Fake Startup Certification Platform
@@ -26,13 +26,10 @@ S Corp is a mostly-static React site with a handful of interactions. The testimo
 The frontend is so boring it's available on [Github](https://github.com/S-Corp-lol/s-corp-lol/), and hosted by Cloudflare Pages.
 
 ### ⚡️ What I needed:
-
-
 * An endpoint to generate 5 fresh testimonials (random startup name, employee, title, templated quote)
 * A certificate generator that accepts a company name and founder name, inserts them into a DOCX file, and returns a PDF
 
 In a typical backend, that’d mean:
-
 * Setting up a server
 * Writing routing and templating logic
 * Hosting, securing, monitoring
@@ -42,19 +39,17 @@ I didn’t want to do any of that. So I used Comnoco.
 
 ### 💬 Dynamic Testimonials from a No-Code Flow 
 In Comnoco, I created a data store (actually a single variable containing JSON) with:
-
 * 150 startup names
 * 150 fake people
 * 150 hilarious job titles
 * 60+ Go-style text/template testimonial patterns
 
 Then I created a logic flow called GetTestimonials that:
-
 1. Picks 5 templates at random
 2. Fills in the variables
 3. Returns them in JSON
 
-No servers. No Postgres. Just a weirdly delightful API I can call from the frontend.
+No servers. No Postgres. Just a weirdly delightful API I can call from the React frontend.
 
 ### 🧾 Certificate Generation That Feels Too Easy 
 Here’s where Comnoco **really** shined.
@@ -85,12 +80,11 @@ S Corp is a parody startup certification site
 It has no backend in the traditional sense
 
 Comnoco handles all dynamic logic:
-
 * Random testimonials
 * PDF certificate generation
 * The project shipped fast and cost nothing to host
 
-You can try it (and download your own fake badge of ethical superiority) at https://s-corp.lol
+You can try it (and download your own fake badge of ethical superiority) here: https://s-corp.lol
 
 And if you’re curious about [Comnoco](https://comnoco.com/), give it a spin — especially if you’re working on anything where the backend doesn’t need to be your job.
 
