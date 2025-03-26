@@ -12,7 +12,7 @@ Behind the scenes, the app is powered by React, Tailwind, and a healthy disrespe
 
 But the interesting bit — and the reason I’m writing this — is the backend.
 
-I didn’t build one.
+**I didn’t build one**
 
 Instead, I used [Comnoco](https://comnoco.com/), a no-code logic engine that let me create a surprisingly flexible backend without writing any actual server code. And despite the project being deeply unserious, Comnoco made some genuinely serious things possible:
 
@@ -25,7 +25,7 @@ S Corp is a mostly-static React site with a handful of interactions. The testimo
 
 The frontend is so boring it's available on [Github](https://github.com/S-Corp-lol/s-corp-lol/), and hosted by Cloudflare Pages.
 
-### ⚡️ What I needed:
+### ⚡️ What I Needed
 * An endpoint to generate 5 fresh testimonials (random startup name, employee, title, templated quote)
 * A certificate generator that accepts a company name and founder name, inserts them into a DOCX file, and returns a PDF
 
