@@ -1,7 +1,7 @@
 ---
 title: "Introducing: S-Corp™"
 date: "2025-03-26T23:00:01.123Z"
-description: "Using [Comnoco](https://comnoco.com/) to automate startup nonsense at scale."
+description: "Using Comnoco to automate startup nonsense at scale."
 ---
 
 ## 🚀 How I Used a No-Code Backend to Power a Fake Startup Certification Platform
