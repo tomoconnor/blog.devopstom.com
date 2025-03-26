@@ -4,7 +4,7 @@ date: "2025-03-26T23:00:01.123Z"
 description: "Using Comnoco to automate startup nonsense at scale."
 ---
 
-# 🚀 How I Used a No-Code Backend to Power a Fake Startup Certification Platform
+## 🚀 How I Used a No-Code Backend to Power a Fake Startup Certification Platform
 
 Recently I launched S Corp™ — a parody certification for startups that want to look ethical without the burden of actually doing anything. You type in your company name, click a button, and get a downloadable certificate that looks suspiciously legit. It’s satire. It’s fast. It’s 100% nonsense.
 
@@ -25,7 +25,7 @@ S Corp is a mostly-static React site with a handful of interactions. The testimo
 
 The frontend is so boring it's available on [Github](https://github.com/S-Corp-lol/s-corp-lol/), and hosted by Cloudflare Pages.
 
-## ⚡️ What I needed:
+### ⚡️ What I needed:
 
 
 * An endpoint to generate 5 fresh testimonials (random startup name, employee, title, templated quote)
@@ -40,7 +40,7 @@ In a typical backend, that’d mean:
 
 I didn’t want to do any of that. So I used Comnoco.
 
-## 💬 Dynamic Testimonials from a No-Code Flow 
+### 💬 Dynamic Testimonials from a No-Code Flow 
 In Comnoco, I created a data store (actually a single variable containing JSON) with:
 
 * 150 startup names
@@ -56,7 +56,7 @@ Then I created a logic flow called GetTestimonials that:
 
 No servers. No Postgres. Just a weirdly delightful API I can call from the frontend.
 
-## 🧾 Certificate Generation That Feels Too Easy 
+### 🧾 Certificate Generation That Feels Too Easy 
 Here’s where Comnoco **really** shined.
 
 I uploaded a .docx template with {{ CompanyName }} and {{ FounderName }} placeholders. Then I built another Comnoco flow that:
@@ -68,7 +68,7 @@ I uploaded a .docx template with {{ CompanyName }} and {{ FounderName }} placeho
 
 I didn’t need to mess with a single PDF library. The whole thing took less time than fighting with any open-source PDF generator I’ve ever touched.
 
-## 🧠 What Worked (and Why It Matters)
+### 🧠 What Worked (and Why It Matters)
 Comnoco gave me the ability to:
 
 * Build two fully functional backend endpoints
@@ -79,7 +79,7 @@ It’s not just for jokes. I could see myself using it for internal tools, proto
 
 And if you’re someone like me who builds weird stuff on weekends (or out of spite), Comnoco hits the sweet spot of fast, functional, and actually fun to use.
 
-*** 🧾 TL;DR ***
+### 🧾 TL;DR 
 S Corp is a parody startup certification site
 
 It has no backend in the traditional sense
