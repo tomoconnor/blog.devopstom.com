@@ -6,7 +6,7 @@ description: "Using Comnoco to automate startup nonsense at scale."
 
 ## 🚀 How I Used a No-Code Backend to Power a Fake Startup Certification Platform
 
-Recently I launched S Corp™ — a parody certification for startups that want to look ethical without the burden of actually doing anything. You type in your company name, click a button, and get a downloadable certificate that looks suspiciously legit. It’s satire. It’s fast. It’s 100% nonsense.
+Recently I launched [S Corp™](https://s-corp.lol) — a parody certification for startups that want to look ethical without the burden of actually doing anything. You type in your company name, click a button, and get a downloadable certificate that looks suspiciously legit. It’s satire. It’s fast. It’s 100% nonsense.
 
 Behind the scenes, the app is powered by React, Tailwind, and a healthy disrespect for real sustainability certifications.
 
