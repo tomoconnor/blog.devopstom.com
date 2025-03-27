@@ -21,7 +21,7 @@ Instead, I used [Comnoco](https://comnoco.com/), a no-code logic engine that let
 * ⚡️ Keeping the entire site stateless, fast, and free from maintenance overhead
 * 💡 The Frontend Was Easy. The Logic? Not Worth Coding.
 
-S Corp is a mostly-static React site with a handful of interactions. The testimonials and certificate download are the only dynamic bits — and honestly, they weren’t worth spinning up a real backend for.
+S Corp is a mostly-static React site with a handful of interactions. The testimonials and certificate download are the only dynamic bits — and honestly, they weren’t worth spinning up a traditional coded backend for.
 
 The frontend is so boring it's available on [Github](https://github.com/S-Corp-lol/s-corp-lol/), and hosted by Cloudflare Pages.
 
