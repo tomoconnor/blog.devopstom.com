@@ -3,8 +3,6 @@ title: "Replacing AWS NAT Gateways with FreeBSD NAT Instances: A 90% Cost Reduct
 date: "2025-12-29T22:20:01.123Z"
 description: "Replacing AWS NAT Gateways with small FreeBSD NAT instances on t4g.nano EC2 can reduce outbound networking costs by over 90 percent. This post explains the architecture and why AWS defaults are not always optimal from a FinOps perspective."
 ---
-# Replacing AWS NAT Gateways with FreeBSD NAT Instances: A 90% Cost Reduction Without Losing Control
-
 
 AWS NAT Gateways are frequently treated as a default component of VPC design. They are simple to deploy, highly available, and largely invisible once in place. In multiple Availability Zone environments, the recommended pattern is to deploy one NAT Gateway per AZ and route private subnets to their local gateway. While operationally convenient, this approach comes with a fixed and often under-examined cost.
 
