@@ -1,20 +1,20 @@
 ---
-title: "Replacing AWS NAT Gateways with FreeBSD NAT Instances: A 90% Cost Reduction Without Losing Control"
-date: "2025-12-29T22:20:01.123Z"
-description: "Replacing AWS NAT Gateways with small FreeBSD NAT instances on t4g.nano EC2 can reduce outbound networking costs by over 90 percent. This post explains the architecture and why AWS defaults are not always optimal from a FinOps perspective."
+title: "A Practical FinOps Win: AWS NAT Costs"
+date: "2025-12-29T23:55:01.123Z"
+description: "A practical FinOps case study on replacing AWS NAT Gateways with FreeBSD NAT instances."
 ---
 
 AWS NAT Gateways are frequently treated as a default component of VPC design. They are simple to deploy, highly available, and largely invisible once in place. In multiple Availability Zone environments, the recommended pattern is to deploy one NAT Gateway per AZ and route private subnets to their local gateway. While operationally convenient, this approach comes with a fixed and often under-examined cost.
 
 This post documents an alternative approach: replacing three managed AWS NAT Gateways with three self-managed NAT instances running FreeBSD on t4g.nano EC2 instances. The focus is on the mechanics of the design, the operational behaviour of FreeBSD as a routing platform, and the financial implications of the change.
 
-## Baseline architecture: managed NAT Gateways
+### Baseline architecture: managed NAT Gateways
 
 In the original configuration, three AWS NAT Gateways were deployed, one in each public subnet across three Availability Zones. Each private subnet route table contained a default route pointing to the NAT Gateway in the same AZ. This design preserved AZ locality, avoided cross-AZ data transfer charges, and limited failure impact to a single zone.
 
 The cost of this configuration was approximately 140 USD per month for the NAT Gateways alone, excluding per-gigabyte data processing charges. For workloads with modest and predictable outbound traffic, this represented a high fixed cost that scaled poorly relative to actual usage.
 
-## Replacement architecture: NAT instances on FreeBSD
+### Replacement architecture: NAT instances on FreeBSD
 
 The replacement architecture mirrors the Availability Zone topology of the managed setup while substituting NAT Gateways with EC2 instances acting as routers.
 
@@ -25,7 +25,7 @@ Each private subnet route table is updated so that the default route points to t
 
 From AWS’s perspective, these instances are simply routing targets associated with elastic network interfaces. From the operating system’s perspective, they are minimal edge routers performing IP forwarding and network address translation.
 
-## Why FreeBSD
+### Why FreeBSD
 
 FreeBSD is well suited to this role due to the maturity and predictability of its networking stack and the tight integration between kernel and base system. Routing, packet filtering, and NAT are all part of the core OS rather than layered on via multiple subsystems.
 
@@ -35,7 +35,7 @@ Equally important is what FreeBSD does not include. Compared to general purpose 
 
 FreeBSD’s conservative release cadence and long-term stability further reduce operational risk for infrastructure expected to run continuously with minimal change.
 
-## Configuration walkthrough: turning a FreeBSD EC2 instance into a NAT router
+### Configuration walkthrough: turning a FreeBSD EC2 instance into a NAT router
 
 Once a FreeBSD EC2 instance is launched in a public subnet, only a small amount of configuration is required to turn it into a functioning NAT gateway.
 
@@ -81,7 +81,7 @@ All translation and state tracking occurs in the kernel, with no dependency on u
 
 With the VPC route tables updated so that private subnet default routes point at the NAT instance, outbound traffic flows transparently through the instance and out to the internet.
 
-## Cost and FinOps implications
+### Cost and FinOps implications
 
 The financial impact of this change is substantial.
 
@@ -91,7 +91,7 @@ Conversely, the NAT instance configuration uses three t4g.nano instances. At app
 
 Even allowing for currency conversion and incidental overhead, this represents a reduction of well over ninety percent in NAT-related monthly spend. From a FinOps perspective, this is a clear example of cost optimisation achieved through architectural choice rather than usage suppression.
 
-## AWS guidance and the economics of convenience
+### AWS guidance and the economics of convenience
 
 [AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html) explicitly recommends NAT Gateways over NAT instances, framing them as the modern, scalable, and operationally safer option. From an operational standpoint, this guidance is understandable. NAT Gateways require no patching, no instance management, no capacity planning, and no operating system level troubleshooting. They are designed to remove responsibility from the customer.
 
@@ -107,13 +107,13 @@ Over time, these defaults become accepted as unavoidable baselines rather than d
 
 It simply reflects the path of least resistance at the time the architecture was designed. Revisiting these defaults as workloads stabilise is often where the largest and least disruptive cost savings are found.
 
-## Operational trade-offs
+### Operational trade-offs
 
 Replacing managed NAT Gateways with NAT instances introduces explicit operational responsibility. The instances must be patched, monitored, and observed like any other EC2 workload. Availability is tied to instance health rather than a fully managed service abstraction. Scaling is bounded by instance capacity, although for typical outbound traffic patterns, a t4g.nano provides ample headroom.  I tested a single t4g.nano to have packet forwarding capability in excess of 1.25Gbit with no issues.
 
 These trade-offs are intentional. The design favours transparency, simplicity, and cost efficiency over abstraction. For environments with low to moderate outbound traffic requirements, this balance is often appropriate.
 
-## Conclusion
+### Conclusion
 
 AWS NAT Gateways provide a convenient and robust abstraction for outbound connectivity, but they do so at a non-trivial and often overlooked cost. For workloads that do not require their full feature set, small and explicitly managed NAT instances can provide equivalent functionality at a fraction of the price.
 
