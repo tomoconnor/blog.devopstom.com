@@ -1,6 +1,6 @@
 ---
 title: "A Practical FinOps Win: AWS NAT Costs"
-date: "2025-12-29T23:14:01.123Z"
+date: "2025-12-29T23:20:01.123Z"
 description: "A practical FinOps case study on replacing AWS NAT Gateways with FreeBSD NAT instances."
 ---
 
