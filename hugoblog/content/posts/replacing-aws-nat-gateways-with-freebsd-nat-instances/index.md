@@ -12,7 +12,7 @@ This post documents an alternative approach: replacing three managed AWS NAT Gat
 
 In the original configuration, three AWS NAT Gateways were deployed, one in each public subnet across three Availability Zones. Each private subnet route table contained a default route pointing to the NAT Gateway in the same AZ. This design preserved AZ locality, avoided cross-AZ data transfer charges, and limited failure impact to a single zone.
 
-The cost of this configuration was approximately £140 per month for the NAT Gateways alone, excluding per-gigabyte data processing charges. For workloads with modest and predictable outbound traffic, this represented a high fixed cost that scaled poorly relative to actual usage.
+For workloads with modest and predictable outbound traffic, this represented a high fixed cost that scaled poorly relative to actual usage.
 
 ### Replacement architecture: NAT instances on FreeBSD
 
@@ -87,7 +87,7 @@ The financial impact of this change is substantial.
 
 The managed NAT Gateway configuration incurred a fixed cost of approximately **£140 per month** for three gateways. This cost was independent of actual traffic volume and increased further with per-gigabyte data processing charges.
 
-Conversely, the NAT instance configuration uses three `t4g.nano` instances. At approximately *£2.54 per instance per month*, the **total monthly cost is around £7.62**. Additional costs are limited to standard EC2 data transfer pricing, which is negligible for most outbound-only workloads.
+Conversely, the NAT instance configuration uses three `t4g.nano` instances. At approximately **£2.54** per instance per month, the total monthly cost is around **£7.62**. Additional costs are limited to standard EC2 data transfer pricing, which is negligible for most outbound-only workloads.
 
 Even allowing for currency conversion and incidental overhead, this represents a reduction of well over ninety percent in NAT-related monthly spend. From a FinOps perspective, this is a clear example of cost optimisation achieved through architectural choice rather than usage suppression.
 
@@ -110,7 +110,7 @@ It simply reflects the path of least resistance at the time the architecture was
 
 ### Operational trade-offs
 
-Replacing managed NAT Gateways with NAT instances introduces explicit operational responsibility. The instances must be patched, monitored, and observed like any other EC2 workload. Availability is tied to instance health rather than a fully managed service abstraction. Scaling is bounded by instance capacity, although for typical outbound traffic patterns, a `t4g.nano` provides ample headroom.  I tested a single `t4g.nano` to have packet forwarding capability in excess of 1.25Gbit with no issues.
+Replacing managed NAT Gateways with NAT instances introduces explicit operational responsibility. The instances must be patched, monitored, and observed like any other EC2 workload. Availability is tied to instance health rather than a fully managed service abstraction. Scaling is bounded by instance capacity, although for typical outbound traffic patterns, a `t4g.nano` provides ample headroom.  I tested a single `t4g.nano` and found it capable of packet forwarding in excess of 1.25Gbps with no issues.
 
 These trade-offs are intentional. The design favours transparency, simplicity, and cost efficiency over abstraction. For environments with low to moderate outbound traffic requirements, this balance is often appropriate.
 
