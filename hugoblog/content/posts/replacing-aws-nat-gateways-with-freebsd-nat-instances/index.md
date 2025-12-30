@@ -18,6 +18,8 @@ For workloads with modest and predictable outbound traffic, this represented a h
 
 The replacement architecture mirrors the Availability Zone topology of the managed setup while substituting NAT Gateways with EC2 instances acting as routers.
 
+![a side by side comparison of the old and new architecture]("/static/nat-instances.png")
+
 * Three EC2 instances are deployed, one per public subnet and hence Availability Zone. 
 * Each instance uses the `t4g.nano` instance type and runs FreeBSD. 
 * Source and destination checking is disabled at the instance level, allowing the kernel to forward packets that are not addressed to the instance itself. 
@@ -80,6 +82,10 @@ At this point, the instance is fully functional as a NAT router.
 All translation and state tracking occurs in the kernel, with no dependency on userland daemons or background services.
 
 With the VPC route tables updated so that private subnet default routes point at the NAT instance, outbound traffic flows transparently through the instance and out to the internet.
+
+### Traffic Flow Diagram
+
+![traffic flow diagram through a NAT instance]("/static/nat-flow.png")
 
 ### Cost and FinOps implications
 
