@@ -197,8 +197,9 @@ That understanding is what makes infrastructure predictable.
 
 And predictable systems are safer systems.
 
+---
 
-## Footnote
+### Footnote
 
 There was a time when running servers below 60% CPU utilisation felt irresponsible.
 
