@@ -4,7 +4,7 @@ date: "2026-06-21T00:00:00.000Z"
 description: "Why I declined a CoderPad challenge, what happened when I did, and what the response revealed."
 ---
 
-# Stop wasting senior engineers' time
+## Stop wasting senior engineers' time
 
 I declined a coding challenge recently. Not because I couldn't do it; because I shouldn't have to.
 
@@ -14,7 +14,7 @@ Here's the thing: no platform engineer solves that problem in Python. You solve 
 
 I've been doing this for fifteen years. I run Kubernetes in production. I run it at home for fun, on bare metal, because I find it interesting. I hold three AWS specialty certifications. I have shipped real systems at real companies that real people depend on. The idea that a timed Python exercise in a browser tab is a meaningful signal about any of that is, at this point, an insult dressed up as a process.
 
-## The problem with coding challenges at senior level
+### The problem with coding challenges at senior level
 
 Coding challenges made a kind of sense once. Early in a career, when someone's resume is thin and their claims are untested, a structured exercise gives you something concrete to evaluate. Fine. But the same logic doesn't hold when someone has a decade and a half of verifiable work history, open-source projects you can read, and a track record you can check with a phone call.
 
@@ -22,14 +22,14 @@ At senior and staff level, the signal you actually want is judgement. Can this p
 
 The two things are not the same.
 
-## It's 2026
+### It's 2026
 
 I want to be direct about something that nobody in hiring seems willing to say out loud: AI writes this code now. If you give me a YAML parsing challenge, I will use a tool to help me write it, because that's what I'd do on the job. The fiction that a coding exercise measures some pure unassisted ability is dead. It's been dead for a while. Most companies just haven't updated their process to reflect that.
 
 What hasn't changed is whether someone can read the output, understand what it's doing, identify where it's wrong, and make a call about whether it's the right approach at all. That's the skill. That's what you should be testing. A timed box on CoderPad doesn't get anywhere near it.
 
 
-## What good looks like
+### What good looks like
 
 The best technical interviews I've had were conversations. Someone walked me through a real system they'd built, told me where it had gone wrong, and asked what I'd have done differently. Or they described an incident and asked how I'd have approached the post-mortem. Or they asked me to design something and then pushed on the edges of whatever I proposed.
 
@@ -37,13 +37,13 @@ Those conversations took about the same time as a coding challenge. They told th
 
 A take-home can work too, if it's scoped honestly. Give me a real problem, give me reasonable time, let me use the tools I'd actually use on the job. Then talk to me about what I built and why. That's a conversation with some substance behind it.
 
-## The self-selection problem nobody mentions
+### The self-selection problem nobody mentions
 
 Companies that use CoderPad for Staff-level roles are selecting for a specific kind of candidate: one who either doesn't know their own worth, or who is desperate enough to comply anyway. Engineers who can afford to walk away from an insulting process do exactly that. The pipeline fills with the ones who can't.
 
 If your interview process consistently drives away experienced engineers, the problem is not the engineers.
 
-## On refusing
+### On refusing
 
 I declined the challenge. I explained why. I said I was happy to discuss platform engineering in whatever depth they wanted, but I wouldn't be doing a timed Python exercise, and here was my reasoning.
 
@@ -56,7 +56,7 @@ That twenty-minute conversation told both of us more than the CoderPad session e
 They closed the process. No alternative offered, no conversation about how else they might assess someone at this level. Just closed.
 That tells you exactly how they think about seniority.
 
-## The part that settled it
+### The last straw
 
 I explained my position on Admission Webhooks and OPA. They weren't interested.
 
