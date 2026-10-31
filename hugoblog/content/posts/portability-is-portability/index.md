@@ -1,6 +1,6 @@
 ---
 title: "Portability Is Portability: Further Adventures in Adversarial Psychology"
-date: "2026-11-02T10:00:00.123Z"
+date: "2026-10-02T10:00:00.123Z"
 description: "In which an AI therapist attempts to protect my penis from a fireplace, endorses a gas-appliance startup, overlooks a compound fracture, and recommends a shopping trolley for my severed head."
 ---
 
